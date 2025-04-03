@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Naturale</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -15,20 +16,22 @@
 </head>
 
 <body>
-    <header>
-        <div id="banner">
-            <h2>Confira nossos produtos de qualidade!</h2>
-            <p>Ofertas e promoções imperdíveis!</p>
-            <p>Produtos que promovem bem-estar e saúde</p>
-        </div>
+    <header class="banner-content">
+        <nav class="navbar">
+            <a href="index.html"><img src="imagens/naturale.png" alt="Logotipo da Naturale" id="navbar-logo"></a>
+            <ul class="navbar-links">
+                <li><a href="#contact">Contato</a></li>
+                <li><a href="#products">Produtos</a></li>
+                <li><a href="#about-us">Sobre Nós</a></li>
+            </ul>
+        </nav>
+        <h2>Melhore sua postura, melhore sua vida</h2>
+        <p>Encontre produtos de alta qualidade para sua saúde postural.</p>
     </header>
     <main>
-        <div class="banner-content">
-            <h2>Melhore sua postura, melhore sua vida</h2>
-            <p>Encontre produtos de alta qualidade para sua saúde postural.</p>
-        </div>
         <section id="contact">
             <h2>Quer agendar? Fale conosco!</h2>
+            <div class="line"></div>
             <p>Você pode solicitar uma visita nos contatando. Siga as informações abaixo:</p>
             <div id="contact-container">
                 <div class="contact-item">
@@ -48,10 +51,11 @@
         </section>
         <section id="products">
             <h2>Produtos</h2>
+            <div class="line"></div>
             <div id="product-card-container">
                 <div class="product-card">
-                    <span class="best-seller">Mais Vendido</span>
-                    <img src="imagens/cinta-abdominal.avif" alt="Cinta Abdominal" class="product-image">
+                    <!-- <span class="best-seller">Mais Vendido</span> -->
+                    <img src="imagens/cinta-abdominal.png" alt="Cinta Abdominal" class="product-image">
                     <h3>Cinta Abdominal</h3>
                     <p>Melhora a postura e oferece suporte à coluna, ajudando a prevenir dores nas costas.
                     </p>
@@ -61,8 +65,8 @@
                     </p>
                 </div>
                 <div class="product-card">
-                    <span class="promotion">Em Promoção</span>
-                    <img src="imagens/cinta-magnetica.webp" alt="Faixa Estética" class="product-image">
+                    <!-- <span class="promotion">Em Promoção</span> -->
+                    <img src="imagens/faixa-estetica.png" alt="Faixa Estética" class="product-image">
                     <h3>Faixa Estética</h3>
                     <p>Proporciona suporte e conforto ao corpo, sendo ideal para uso estético e correção postural leve.
                     </p>
@@ -72,9 +76,9 @@
                     </p>
                 </div>
                 <div class="product-card">
-                    <span class="last-units">Últimas Unidades</span>
-                    <img src="imagens/cinta-magnetica.webp" alt="Cinta Magnética Ortopédica" class="product-image">
-                    <h3>Cinta Magnética Ortopédica</h3>
+                    <span class="best-seller">Mais Vendido</span>
+                    <img src="imagens/cinta-magnetica.png" alt="Cinta Magnética" class="product-image">
+                    <h3>Cinta Magnética</h3>
                     <p>Alivia dores nas costas e corrige a postura, utilizando ímãs para oferecer benefícios
                         terapêuticos.</p>
                     <p class="product-size">
@@ -83,8 +87,7 @@
                     </p>
                 </div>
                 <div class="product-card">
-                    <span class="best-seller">Mais Vendido</span>
-                    <img src="imagens/espaldeira.jpg" alt="Espaldeira" class="product-image">
+                    <img src="imagens/espaldeira.png" alt="Espaldeira" class="product-image">
                     <h3>Espaldeira</h3>
                     <p>Corrige a postura dos ombros e das costas, ajudando a manter uma postura ereta e saudável.</p>
                     <p class="product-size">
@@ -93,8 +96,7 @@
                     </p>
                 </div>
                 <div class="product-card">
-                    <span class="promotion">Em Promoção</span>
-                    <img src="imagens/espaldeira.jpg" alt="Corretor Postural" class="product-image">
+                    <img src="imagens/corretor-postural.png" alt="Corretor Postural" class="product-image">
                     <h3>Corretor Postural</h3>
                     <p>Mantém a postura correta em diferentes situações, prevenindo dores e desconfortos relacionados à
                         má postura.</p>
@@ -103,16 +105,54 @@
                         GGG
                     </p>
                 </div>
+                <div class="product-card">
+                    <span class="best-seller">Mais Vendido</span>
+                    <img src="imagens/palmilha-ortopedica.jpeg" alt="Palmilha Otopédica" class="product-image">
+                    <h3>Palmilha Ortopédica</h3>
+                    <p>Oferece suporte adequado aos pés, corrigindo desequilíbrios, aliviando dores e prevenindo
+                        problemas posturais e ortopédicos.</p>
+                    <p class="product-size">
+                        <i class="fa-solid fa-up-right-and-down-left-from-center"></i> Tamanhos disponíveis: P, M, G,
+                        GGG
+                    </p>
+                </div>
             </div>
         </section>
+        <section id="about-us">
+            <h2>Sobre Nós</h2>
+            <div class="line"></div>
+            <p>Na <a href="index.html"><strong>Naturale</strong></a>, nossa missão é promover <strong>saúde</strong> e <strong>bem-estar</strong> por meio de <strong>produtos ortopédicos</strong> de alta qualidade. Acreditamos que cuidar da <strong>postura</strong> e do <strong>corpo</strong> é essencial para uma vida mais <strong>saudável</strong> e <strong>equilibrada</strong>. Com foco em soluções <strong>naturais</strong> e eficientes, oferecemos produtos que ajudam na <strong>correção postural</strong>, no <strong>alívio de dores</strong> e no <strong>conforto diário</strong>.</p>
+            <p>Nosso compromisso é com a sua <strong>saúde</strong>, proporcionando <strong>suporte</strong>, <strong>conforto</strong> e <strong>qualidade de vida</strong>. Seja para <strong>prevenção</strong> ou <strong>tratamento</strong>, estamos aqui para ajudar você a se sentir melhor.</p>
+        </section>
+
         <section id="final-sentence">
             <p>Ortopedia em favor da saúde</p>
         </section>
     </main>
+
     <footer>
-        <p>Fabricado por Ideal Ortopédicos</p>
-        <p>&copy; 2024 Naturale. Todos os direitos reservados.</p>
+        <div class="footer-content">
+            <div class="footer-message">
+                <h4>Fabricado por Ideal Ortopédicos</h4>
+                <p>Soluções posturais para melhorar sua qualidade de vida. Cintas, faixas e corretores de alta qualidade.</p>
+                <p>Todas imagens dos produtos acima foram autorizadas pela Ideal Ortopédicos.</p>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Links Importantes</h4>
+                <ul class="footer-pages">
+                    <li><a href="#contact">Contato</a></li>
+                    <li><a href="#products">Produtos</a></li>
+                    <li><a href="#about-us">Sobre Nós</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Naturale. Todos os direitos reservados.</p>
+        </div>
     </footer>
+    
 </body>
 
 </html>

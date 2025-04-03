@@ -13,6 +13,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 div#banner {
@@ -35,17 +37,64 @@ p {
     padding: 10px;
 }
 
+.line {
+    height: 2px;
+    background-color: #004d00;
+    border: none;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0.625rem;
+    position: relative;
+    width: 100vw;
+}
+
+#navbar-logo {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-grow: 1;
+    margin: 0;
+}
+
+.navbar-links li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+.navbar-links li a:hover {
+    color: #6fe06f;
+}
+
 .banner-content {
-    background-image: url('imagens/natureza.jpeg');
+    background-image: url('imagens/banner.jpg');
     background-size: cover;
     background-position: center;
-    height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     color: white;
     text-align: center;
+    position: relative;
+    padding: 10px;
 }
 
 .banner-content h2 {
@@ -57,7 +106,7 @@ p {
 .banner-content p {
     font-size: 24px;
     margin: 10px 0 0;
-    color: #32CD32;
+    color: #6fe06f;
 }
 
 section#contact {
@@ -110,7 +159,6 @@ div.contact-item {
 
 #alert p {
     color: #333;
-
 }
 
 #alert strong {
@@ -132,43 +180,48 @@ div#product-card-container {
 }
 
 div.product-card {
+    display: flex;
+    flex-direction: column;
     background-color: white;
     border-radius: 5px;
     margin: 10px;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 250px;
+    height: 420px;
+    width: 300px;
     text-align: center;
     position: relative;
-    height: 500px;
+    border-left: 3px solid #004d00;
 }
 
 .product-image {
     max-width: 100%;
     border-radius: 5px;
-    height: 200px;
-    width: 200px;
+    height: 175px;
+    width: 225px;
     padding: 10px;
+    margin: auto;
 }
 
 .product-card h3 {
     font-size: 20px;
     margin: 10px 0;
     color: #006400;
+    flex-grow: 1;
 }
 
 .product-card p {
     font-size: 16px;
     margin: 10px 0;
     text-align: center;
+    flex-grow: 1;
 }
 
 .best-seller,
 .promotion,
 .last-units {
     position: absolute;
-    top: -10px;
-    left: 10px;
+    top: -15px;
+    left: -10px;
     padding: 5px 10px;
     color: #ffffff;
     font-weight: bold;
@@ -177,17 +230,14 @@ div.product-card {
 
 .best-seller {
     background-color: #FF7F50;
-    border: 1px solid #B71C1C;
 }
 
 .promotion {
     background-color: #FFB74D;
-    border: 1px solid #F57C00;
 }
 
 .last-units {
     background-color: #4FC3F7;
-    border: 1px solid #0288D1;
 }
 
 .product-size {
@@ -196,22 +246,30 @@ div.product-card {
     background-color: #D32F2F;
     padding: 5px;
     border-radius: 3px;
-    display: inline-block;
-    margin-top: 10px;
+    text-align: justify;
+}
+
+section#about-us {
+    padding: 20px;
+    width: 100%;
+    background-color: #acc889;
+    color: #333333;
+}
+
+section#about-us a {
+    color: #388E3C;
 }
 
 #final-sentence {
     background: url('imagens/ortopedia.jpg') no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    animation: fadeIn 1.5s ease-in-out;
     background-color: #E0E0E0;
     text-align: center;
     padding: 15px;
     font-size: 1.5rem;
     color: #333333;
     font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7)
 }
 
 #final-sentence p {
@@ -221,23 +279,96 @@ div.product-card {
     letter-spacing: 1px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 footer {
     background-color: #333333;
     color: #E0E0E0;
-    padding: 20px;
-    text-align: center;
     width: 100%;
     margin-top: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-message,
+.footer-links {
+    text-align: left;
+    padding: 0 20px;
+    width: 45%;
+}
+
+.footer-content h4 {
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.footer-message p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-links ul {
+    padding: 0;
+}
+
+.footer-pages {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer-pages li a {
+    color: #E0E0E0;
+    text-decoration: none;
+}
+
+.footer-pages li a:hover {
+    color: #3498db;
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #7c7a7a;
+    padding-top: 10px;
+    font-size: 0.9rem;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-pages {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-message,
+    .footer-links {
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+    }
 }
